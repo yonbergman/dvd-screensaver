@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B0497F0B1B6FE3710078C6A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0497F0A1B6FE3710078C6A2 /* AppDelegate.swift */; };
+		B0497F0D1B6FE3710078C6A2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B0497F0C1B6FE3710078C6A2 /* GameScene.sks */; };
+		B0497F0F1B6FE3710078C6A2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0497F0E1B6FE3710078C6A2 /* GameScene.swift */; };
+		B0497F111B6FE3710078C6A2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0497F101B6FE3710078C6A2 /* GameViewController.swift */; };
+		B0497F141B6FE3710078C6A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0497F121B6FE3710078C6A2 /* Main.storyboard */; };
+		B0497F161B6FE3710078C6A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0497F151B6FE3710078C6A2 /* Images.xcassets */; };
+		B0497F191B6FE3710078C6A2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0497F171B6FE3710078C6A2 /* LaunchScreen.xib */; };
+		B0497F251B6FE3710078C6A2 /* DVD_screensaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0497F241B6FE3710078C6A2 /* DVD_screensaverTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B0497F1F1B6FE3710078C6A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B0497EFD1B6FE3710078C6A2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B0497F041B6FE3710078C6A2;
+			remoteInfo = "DVD screensaver";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B0497F051B6FE3710078C6A2 /* DVD screensaver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DVD screensaver.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0497F091B6FE3710078C6A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0497F0A1B6FE3710078C6A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B0497F0C1B6FE3710078C6A2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		B0497F0E1B6FE3710078C6A2 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B0497F101B6FE3710078C6A2 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B0497F131B6FE3710078C6A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B0497F151B6FE3710078C6A2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B0497F181B6FE3710078C6A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		B0497F1E1B6FE3710078C6A2 /* DVD screensaverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DVD screensaverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0497F231B6FE3710078C6A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0497F241B6FE3710078C6A2 /* DVD_screensaverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVD_screensaverTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B0497F021B6FE3710078C6A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0497F1B1B6FE3710078C6A2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0497EFC1B6FE3710078C6A2 = {
+			isa = PBXGroup;
+			children = (
+				B0497F071B6FE3710078C6A2 /* DVD screensaver */,
+				B0497F211B6FE3710078C6A2 /* DVD screensaverTests */,
+				B0497F061B6FE3710078C6A2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B0497F061B6FE3710078C6A2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B0497F051B6FE3710078C6A2 /* DVD screensaver.app */,
+				B0497F1E1B6FE3710078C6A2 /* DVD screensaverTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B0497F071B6FE3710078C6A2 /* DVD screensaver */ = {
+			isa = PBXGroup;
+			children = (
+				B0497F0A1B6FE3710078C6A2 /* AppDelegate.swift */,
+				B0497F0C1B6FE3710078C6A2 /* GameScene.sks */,
+				B0497F0E1B6FE3710078C6A2 /* GameScene.swift */,
+				B0497F101B6FE3710078C6A2 /* GameViewController.swift */,
+				B0497F121B6FE3710078C6A2 /* Main.storyboard */,
+				B0497F151B6FE3710078C6A2 /* Images.xcassets */,
+				B0497F171B6FE3710078C6A2 /* LaunchScreen.xib */,
+				B0497F081B6FE3710078C6A2 /* Supporting Files */,
+			);
+			path = "DVD screensaver";
+			sourceTree = "<group>";
+		};
+		B0497F081B6FE3710078C6A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0497F091B6FE3710078C6A2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0497F211B6FE3710078C6A2 /* DVD screensaverTests */ = {
+			isa = PBXGroup;
+			children = (
+				B0497F241B6FE3710078C6A2 /* DVD_screensaverTests.swift */,
+				B0497F221B6FE3710078C6A2 /* Supporting Files */,
+			);
+			path = "DVD screensaverTests";
+			sourceTree = "<group>";
+		};
+		B0497F221B6FE3710078C6A2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B0497F231B6FE3710078C6A2 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B0497F041B6FE3710078C6A2 /* DVD screensaver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0497F281B6FE3710078C6A2 /* Build configuration list for PBXNativeTarget "DVD screensaver" */;
+			buildPhases = (
+				B0497F011B6FE3710078C6A2 /* Sources */,
+				B0497F021B6FE3710078C6A2 /* Frameworks */,
+				B0497F031B6FE3710078C6A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DVD screensaver";
+			productName = "DVD screensaver";
+			productReference = B0497F051B6FE3710078C6A2 /* DVD screensaver.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B0497F1D1B6FE3710078C6A2 /* DVD screensaverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B0497F2B1B6FE3710078C6A2 /* Build configuration list for PBXNativeTarget "DVD screensaverTests" */;
+			buildPhases = (
+				B0497F1A1B6FE3710078C6A2 /* Sources */,
+				B0497F1B1B6FE3710078C6A2 /* Frameworks */,
+				B0497F1C1B6FE3710078C6A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B0497F201B6FE3710078C6A2 /* PBXTargetDependency */,
+			);
+			name = "DVD screensaverTests";
+			productName = "DVD screensaverTests";
+			productReference = B0497F1E1B6FE3710078C6A2 /* DVD screensaverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B0497EFD1B6FE3710078C6A2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = yonbergman;
+				TargetAttributes = {
+					B0497F041B6FE3710078C6A2 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					B0497F1D1B6FE3710078C6A2 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = B0497F041B6FE3710078C6A2;
+					};
+				};
+			};
+			buildConfigurationList = B0497F001B6FE3710078C6A2 /* Build configuration list for PBXProject "DVD screensaver" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B0497EFC1B6FE3710078C6A2;
+			productRefGroup = B0497F061B6FE3710078C6A2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B0497F041B6FE3710078C6A2 /* DVD screensaver */,
+				B0497F1D1B6FE3710078C6A2 /* DVD screensaverTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B0497F031B6FE3710078C6A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0497F191B6FE3710078C6A2 /* LaunchScreen.xib in Resources */,
+				B0497F161B6FE3710078C6A2 /* Images.xcassets in Resources */,
+				B0497F0D1B6FE3710078C6A2 /* GameScene.sks in Resources */,
+				B0497F141B6FE3710078C6A2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0497F1C1B6FE3710078C6A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B0497F011B6FE3710078C6A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0497F0F1B6FE3710078C6A2 /* GameScene.swift in Sources */,
+				B0497F111B6FE3710078C6A2 /* GameViewController.swift in Sources */,
+				B0497F0B1B6FE3710078C6A2 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0497F1A1B6FE3710078C6A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0497F251B6FE3710078C6A2 /* DVD_screensaverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B0497F201B6FE3710078C6A2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B0497F041B6FE3710078C6A2 /* DVD screensaver */;
+			targetProxy = B0497F1F1B6FE3710078C6A2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B0497F121B6FE3710078C6A2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0497F131B6FE3710078C6A2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B0497F171B6FE3710078C6A2 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B0497F181B6FE3710078C6A2 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B0497F261B6FE3710078C6A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0497F271B6FE3710078C6A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B0497F291B6FE3710078C6A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "DVD screensaver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B0497F2A1B6FE3710078C6A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "DVD screensaver/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B0497F2C1B6FE3710078C6A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DVD screensaverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DVD screensaver.app/DVD screensaver";
+			};
+			name = Debug;
+		};
+		B0497F2D1B6FE3710078C6A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "DVD screensaverTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DVD screensaver.app/DVD screensaver";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B0497F001B6FE3710078C6A2 /* Build configuration list for PBXProject "DVD screensaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0497F261B6FE3710078C6A2 /* Debug */,
+				B0497F271B6FE3710078C6A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B0497F281B6FE3710078C6A2 /* Build configuration list for PBXNativeTarget "DVD screensaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0497F291B6FE3710078C6A2 /* Debug */,
+				B0497F2A1B6FE3710078C6A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B0497F2B1B6FE3710078C6A2 /* Build configuration list for PBXNativeTarget "DVD screensaverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0497F2C1B6FE3710078C6A2 /* Debug */,
+				B0497F2D1B6FE3710078C6A2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B0497EFD1B6FE3710078C6A2 /* Project object */;
+}
