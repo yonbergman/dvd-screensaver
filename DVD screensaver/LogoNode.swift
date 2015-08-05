@@ -16,12 +16,11 @@ enum LogoType {
     SKColor.whiteColor(),
     SKColor.lightGrayColor(),
     SKColor.cyanColor(),
-
+    SKColor.yellowColor(),
   ]
   static let darkColors = [
     SKColor.greenColor(),
     SKColor.redColor(),
-    SKColor.yellowColor(),
     SKColor.orangeColor(),
     SKColor.purpleColor(),
     SKColor.magentaColor(),

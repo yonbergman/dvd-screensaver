@@ -15,6 +15,7 @@
 		B0497F191B6FE3710078C6A2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0497F171B6FE3710078C6A2 /* LaunchScreen.xib */; };
 		B06A43431B7277BF00A22C96 /* LogoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A43421B7277BF00A22C96 /* LogoNode.swift */; };
 		B06A43451B7278EA00A22C96 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A43441B7278EA00A22C96 /* AppConstants.swift */; };
+		B0D099891B72881800682AC8 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D099881B72881800682AC8 /* SplashVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B0497F181B6FE3710078C6A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B06A43421B7277BF00A22C96 /* LogoNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoNode.swift; sourceTree = "<group>"; };
 		B06A43441B7278EA00A22C96 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		B0D099881B72881800682AC8 /* SplashVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				B0497F121B6FE3710078C6A2 /* Main.storyboard */,
 				B0497F101B6FE3710078C6A2 /* MainViewController.swift */,
 				B06A43421B7277BF00A22C96 /* LogoNode.swift */,
+				B0D099881B72881800682AC8 /* SplashVC.swift */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 				B0497F111B6FE3710078C6A2 /* MainViewController.swift in Sources */,
 				B0497F0B1B6FE3710078C6A2 /* AppDelegate.swift in Sources */,
 				B06A43451B7278EA00A22C96 /* AppConstants.swift in Sources */,
+				B0D099891B72881800682AC8 /* SplashVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

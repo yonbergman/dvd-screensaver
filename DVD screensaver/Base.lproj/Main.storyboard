@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="n9w-bY-4sS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="Dc6-GM-eQ7">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" id="n9w-bY-4sS" customClass="SplashViewController" customModule="dvd_saver" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fkp-TU-ZgJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="g2Y-M4-yeh"/>
+                    </layoutGuides>
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="NjA-PZ-stx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bHQ-LL-dDW" userLabel="line">
+                                <rect key="frame" x="72" y="75" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view autoresizesSubviews="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k5D-eq-hQs" userLabel="circle" customClass="Circle" customModule="dvd_saver" customModuleProvider="target">
+                                <rect key="frame" x="21" y="20" width="300" height="300"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="circle" destination="k5D-eq-hQs" id="FF9-x3-29B"/>
+                        <outlet property="line" destination="bHQ-LL-dDW" id="zTi-Id-2Ep"/>
+                        <segue destination="BV1-FR-VrT" kind="presentation" identifier="next" modalTransitionStyle="crossDissolve" id="W6X-W8-ZMW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRg-ux-a9S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="418"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
@@ -20,6 +53,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="876" y="402"/>
         </scene>
     </scenes>
 </document>
