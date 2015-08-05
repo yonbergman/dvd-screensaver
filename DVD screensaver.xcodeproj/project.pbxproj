@@ -15,6 +15,8 @@
 		B0497F161B6FE3710078C6A2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0497F151B6FE3710078C6A2 /* Images.xcassets */; };
 		B0497F191B6FE3710078C6A2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0497F171B6FE3710078C6A2 /* LaunchScreen.xib */; };
 		B0497F251B6FE3710078C6A2 /* DVD_screensaverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0497F241B6FE3710078C6A2 /* DVD_screensaverTests.swift */; };
+		B06A43431B7277BF00A22C96 /* LogoNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A43421B7277BF00A22C96 /* LogoNode.swift */; };
+		B06A43451B7278EA00A22C96 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A43441B7278EA00A22C96 /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		B0497F1E1B6FE3710078C6A2 /* DVD screensaverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DVD screensaverTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0497F231B6FE3710078C6A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0497F241B6FE3710078C6A2 /* DVD_screensaverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DVD_screensaverTests.swift; sourceTree = "<group>"; };
+		B06A43421B7277BF00A22C96 /* LogoNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoNode.swift; sourceTree = "<group>"; };
+		B06A43441B7278EA00A22C96 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				B0497F151B6FE3710078C6A2 /* Images.xcassets */,
 				B0497F171B6FE3710078C6A2 /* LaunchScreen.xib */,
 				B0497F081B6FE3710078C6A2 /* Supporting Files */,
+				B06A43421B7277BF00A22C96 /* LogoNode.swift */,
+				B06A43441B7278EA00A22C96 /* AppConstants.swift */,
 			);
 			path = "DVD screensaver";
 			sourceTree = "<group>";
@@ -219,9 +225,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B06A43431B7277BF00A22C96 /* LogoNode.swift in Sources */,
 				B0497F0F1B6FE3710078C6A2 /* GameScene.swift in Sources */,
 				B0497F111B6FE3710078C6A2 /* GameViewController.swift in Sources */,
 				B0497F0B1B6FE3710078C6A2 /* AppDelegate.swift in Sources */,
+				B06A43451B7278EA00A22C96 /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +427,7 @@
 				B0497F2A1B6FE3710078C6A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B0497F2B1B6FE3710078C6A2 /* Build configuration list for PBXNativeTarget "DVD screensaverTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +436,7 @@
 				B0497F2D1B6FE3710078C6A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

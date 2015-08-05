@@ -8,38 +8,104 @@
 
 import SpriteKit
 
+extension Array {
+  func sample() -> Element {
+    let randomIndex = Int(arc4random_uniform(UInt32(self.count)))
+    return self[randomIndex]
+  }
+}
+
 class GameScene: SKScene {
-    override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
-        
-        self.addChild(myLabel)
+  
+  
+  var didSetup = false
+  var dvdNode: SKSpriteNode!
+  var containerNode: SKShapeNode!
+  let logoWidth: CGFloat = 100
+  var logoType = LogoType.random() {
+    didSet {
+      updateColor()
     }
+  }
+  let initialImpluse = CGVector(dx: 50, dy: 25)
+  let contactBitMask: UInt32 = 1
+  
+  
+  override func didMoveToView(view: SKView) {
+    if !didSetup {
+      setup()
+      didSetup = true
+    }
+  }
+  
+  func updateBounds(){
+    self.physicsBody = SKPhysicsBody(edgeLoopFromRect: frame)
+    physicsBody?.friction = 0
+    physicsBody?.contactTestBitMask = contactBitMask
+    physicsBody?.categoryBitMask = contactBitMask
+    dvdNode?.position = CGPoint(x: frame.midX, y: frame.midY)
+  }
+  
+  func setup() {
+    self.backgroundColor = UIColor.blackColor()
+    self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+    self.physicsWorld.contactDelegate = self
+    updateBounds()
+
+    dvdNode = SKSpriteNode(imageNamed: "logo")
+    addChild(dvdNode)
+
+    dvdNode.position = CGPoint(x: frame.midX, y: frame.midY)
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        /* Called when a touch begins */
-        
-        for touch in (touches as! Set<UITouch>) {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
+    let ratio = dvdNode.size.height / dvdNode.size.width
+    let logoHeight = ratio * logoWidth
+    dvdNode.size = CGSize(width: logoWidth, height: logoHeight)
+
+    dvdNode.physicsBody = SKPhysicsBody(rectangleOfSize: dvdNode.size)
+    dvdNode.physicsBody?.friction = 0
+    dvdNode.physicsBody?.restitution = 1
+    dvdNode.physicsBody?.angularDamping = 0
+    dvdNode.physicsBody?.linearDamping = 0
+    dvdNode.physicsBody?.applyImpulse(initialImpluse)
+    dvdNode.physicsBody?.contactTestBitMask = contactBitMask
+    dvdNode.physicsBody?.categoryBitMask = contactBitMask
+
+    
+
+    
+    containerNode = SKShapeNode(rect: CGRect(x: -logoWidth/2, y: -logoHeight/2, width: logoWidth, height: logoHeight))
+    containerNode.strokeColor = UIColor.clearColor()
+    dvdNode.addChild(containerNode)
+    
+    updateColor()
+  }
+  
+  func updateColor() {
+    if logoType == .Shape {
+      dvdNode.colorBlendFactor = 0
+      containerNode.fillColor = logoType.color()
+    } else {
+      containerNode.fillColor = UIColor.clearColor()
+      dvdNode.color = logoType.color()
+      dvdNode.colorBlendFactor = 1
     }
-   
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
-    }
+  }
+  
+  
+  
+  override func update(currentTime: CFTimeInterval) {
+  }
+  
+  override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    self.logoType = logoType == .Shape ? .Logo : .Shape
+    
+  }
+}
+
+extension GameScene: SKPhysicsContactDelegate {
+  func didBeginContact(contact: SKPhysicsContact) {
+    println("A")
+    updateColor()
+  }
+
 }
