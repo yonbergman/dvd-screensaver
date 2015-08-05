@@ -12,21 +12,66 @@ import SpriteKit
 enum LogoType {
   static let imgName = "logo"
   
-  case Shape, Logo
+  case Square, Logo, Oval
   
   static func random() -> LogoType {
-    return [LogoType.Shape, LogoType.Logo].sample()
+    return [LogoType.Square, LogoType.Logo].sample()
   }
   
   var imageNamed: String { return LogoType.imgName }
   
-  func color() -> SKColor {
+  func randomColor() -> SKColor {
     return [
       SKColor.greenColor(),
       SKColor.redColor(),
       SKColor.yellowColor(),
       SKColor.orangeColor()
       ].sample()
+  }
+  
+  func backgroundColor() -> SKColor {
+    switch self {
+      case .Oval, .Square: return randomColor()
+      default: return SKColor.clearColor()
+    }
+  }
+  
+  func logoColor() -> SKColor {
+    switch self {
+      case .Oval, .Square: return SKColor.whiteColor()
+      default: return randomColor()
+    }
+  }
+  
+  func next() -> LogoType {
+    switch self {
+    case .Square: return .Logo
+    case .Logo: return .Oval
+    case .Oval: return .Square
+    }
+  }
+  
+  var scale: CGFloat {
+    switch self {
+    case .Square: return 0.8
+    case .Logo: return 1
+    case .Oval: return 0.7
+    }
+  }
+  
+  var colorBlendFactor: CGFloat {
+    switch self {
+    case .Square, .Oval: return 0
+    case .Logo: return 1
+    }
+  }
+  
+  func pathForFrame(frame: CGRect) -> CGPath {
+    switch self {
+      case .Oval: return UIBezierPath(ovalInRect: frame).CGPath
+      case .Square: return UIBezierPath(rect: frame).CGPath
+      default: return UIBezierPath(rect: frame).CGPath
+    }
   }
   
   static let Default = LogoType.Logo
@@ -36,7 +81,11 @@ enum LogoType {
 
 class LogoNode: SKNode {
   
-  var type: LogoType = LogoType.random()
+  var type: LogoType = LogoType.random() {
+    didSet {
+      updateColor()
+    }
+  }
   
   let imgNode: SKSpriteNode
   let containerNode: SKShapeNode
@@ -47,49 +96,53 @@ class LogoNode: SKNode {
 
     imgNode = SKSpriteNode(imageNamed: type.imageNamed)
 
-
-    
-//    dvdNode.position = CGPoint(x: frame.midX, y: frame.midY)
-    
     let imgRatio = imgNode.size.height / imgNode.size.width
     let logoHeight = imgRatio * logoWidth
     imgNode.size = CGSize(width: logoWidth, height: logoHeight)
     
-    imgNode.physicsBody = SKPhysicsBody(rectangleOfSize: imgNode.size)
-    imgNode.physicsBody?.friction = 0
-    imgNode.physicsBody?.restitution = 1
-    imgNode.physicsBody?.angularDamping = 0
-    imgNode.physicsBody?.linearDamping = 0
-//    imgNode.physicsBody?.applyImpulse(initialImpluse)
-    imgNode.physicsBody?.contactTestBitMask = kContactBitMask
-    imgNode.physicsBody?.categoryBitMask = kContactBitMask
+    
     
     
     containerNode = SKShapeNode(rect: CGRect(x: -logoWidth/2, y: -logoHeight/2,
                                              width: logoWidth, height: logoHeight))
     containerNode.strokeColor = UIColor.clearColor()
     
-    
     super.init()
     addChild(imgNode)
-    imgNode.addChild(containerNode)
+    addChild(containerNode)
+    addPhysics()
     updateColor()
   }
   
+  private func addPhysics() {
+    physicsBody = SKPhysicsBody(rectangleOfSize: imgNode.size)
+    physicsBody?.friction = 0
+    physicsBody?.restitution = 1
+    physicsBody?.angularDamping = 0
+    physicsBody?.linearDamping = 0
+    physicsBody?.contactTestBitMask = kContactBitMask
+    physicsBody?.categoryBitMask = kContactBitMask
+  }
 
   required init?(coder aDecoder: NSCoder) {
       fatalError("init(coder:) has not been implemented")
   }
   
   func updateColor() {
-    if type == .Shape {
-      imgNode.colorBlendFactor = 0
-      containerNode.fillColor = type.color()
-    } else {
-      containerNode.fillColor = UIColor.clearColor()
-      imgNode.color = type.color()
-      imgNode.colorBlendFactor = 1
-    }
+    imgNode.colorBlendFactor = type.colorBlendFactor
+    imgNode.color = type.logoColor()
+    imgNode.xScale = type.scale
+    imgNode.yScale = type.scale
+    containerNode.fillColor = type.backgroundColor()
+    containerNode.path = type.pathForFrame(containerNode.frame)
+  }
+  
+  func applyImpulse(vector: CGVector) {
+    physicsBody?.applyImpulse(vector)
+  }
+  
+  func toggleType() {
+    type = type.next()
   }
   
 }

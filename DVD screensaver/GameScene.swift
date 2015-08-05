@@ -19,17 +19,8 @@ class GameScene: SKScene {
   
   
   var didSetup = false
-  var dvdNode: SKSpriteNode!
-  var containerNode: SKShapeNode!
-  let logoWidth: CGFloat = 100
-  var logoType = LogoType.random() {
-    didSet {
-      updateColor()
-    }
-  }
+  var logoNode: LogoNode!
   let initialImpluse = CGVector(dx: 50, dy: 25)
-  let contactBitMask: UInt32 = 1
-  
   
   override func didMoveToView(view: SKView) {
     if !didSetup {
@@ -41,9 +32,13 @@ class GameScene: SKScene {
   func updateBounds(){
     self.physicsBody = SKPhysicsBody(edgeLoopFromRect: frame)
     physicsBody?.friction = 0
-    physicsBody?.contactTestBitMask = contactBitMask
-    physicsBody?.categoryBitMask = contactBitMask
-    dvdNode?.position = CGPoint(x: frame.midX, y: frame.midY)
+    physicsBody?.contactTestBitMask = kContactBitMask
+    physicsBody?.categoryBitMask = kContactBitMask
+    centerLogo()
+  }
+  
+  func centerLogo() {
+    logoNode?.position = CGPoint(x: frame.midX, y: frame.midY)
   }
   
   func setup() {
@@ -52,60 +47,23 @@ class GameScene: SKScene {
     self.physicsWorld.contactDelegate = self
     updateBounds()
 
-    dvdNode = SKSpriteNode(imageNamed: "logo")
-    addChild(dvdNode)
-
-    dvdNode.position = CGPoint(x: frame.midX, y: frame.midY)
-    
-    let ratio = dvdNode.size.height / dvdNode.size.width
-    let logoHeight = ratio * logoWidth
-    dvdNode.size = CGSize(width: logoWidth, height: logoHeight)
-
-    dvdNode.physicsBody = SKPhysicsBody(rectangleOfSize: dvdNode.size)
-    dvdNode.physicsBody?.friction = 0
-    dvdNode.physicsBody?.restitution = 1
-    dvdNode.physicsBody?.angularDamping = 0
-    dvdNode.physicsBody?.linearDamping = 0
-    dvdNode.physicsBody?.applyImpulse(initialImpluse)
-    dvdNode.physicsBody?.contactTestBitMask = contactBitMask
-    dvdNode.physicsBody?.categoryBitMask = contactBitMask
-
-    
-
-    
-    containerNode = SKShapeNode(rect: CGRect(x: -logoWidth/2, y: -logoHeight/2, width: logoWidth, height: logoHeight))
-    containerNode.strokeColor = UIColor.clearColor()
-    dvdNode.addChild(containerNode)
-    
-    updateColor()
+    logoNode = LogoNode()
+    addChild(logoNode)
+    centerLogo()
+    logoNode.applyImpulse(initialImpluse)
   }
-  
-  func updateColor() {
-    if logoType == .Shape {
-      dvdNode.colorBlendFactor = 0
-      containerNode.fillColor = logoType.color()
-    } else {
-      containerNode.fillColor = UIColor.clearColor()
-      dvdNode.color = logoType.color()
-      dvdNode.colorBlendFactor = 1
-    }
-  }
-  
-  
-  
+
   override func update(currentTime: CFTimeInterval) {
   }
   
   override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-    self.logoType = logoType == .Shape ? .Logo : .Shape
-    
+    logoNode.toggleType()
   }
 }
 
 extension GameScene: SKPhysicsContactDelegate {
   func didBeginContact(contact: SKPhysicsContact) {
-    println("A")
-    updateColor()
+    logoNode.updateColor()
   }
 
 }
