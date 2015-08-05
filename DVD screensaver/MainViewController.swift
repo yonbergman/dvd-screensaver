@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  MainViewController.swift
 //  DVD screensaver
 //
 //  Created by Bergman, Yon on 8/3/15.
@@ -9,9 +9,9 @@
 import UIKit
 import SpriteKit
 
-class GameViewController: UIViewController {
+class MainViewController: UIViewController {
   
-  var scene: GameScene!
+  var scene: ScreensaverScene!
   
   var skView: SKView { return view as! SKView }
   
@@ -25,17 +25,14 @@ class GameViewController: UIViewController {
   
   override func viewWillLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    println("didLayout")
     if scene == nil {
-      scene = GameScene(size: skView.bounds.size)
+      scene = ScreensaverScene(size: skView.bounds.size)
       scene.scaleMode = .AspectFill
       skView.presentScene(scene)
     } else {
       scene.size = skView.bounds.size
       scene.updateBounds()
     }
-    //    skView.
-    //    self.scene.scene?.size = self.scene.frame.size
   }
   
   override func shouldAutorotate() -> Bool {

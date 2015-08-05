@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:DVD screensaver.xcodeproj">
+      location = "self:/Users/ybergman/Development/dvd-screensaver/dvd-saver.xcodeproj">
    </FileRef>
 </Workspace>

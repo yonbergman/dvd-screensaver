@@ -1,5 +1,5 @@
 //
-//  GameScene.swift
+//  ScreensaverScene.swift
 //  DVD screensaver
 //
 //  Created by Bergman, Yon on 8/3/15.
@@ -15,7 +15,7 @@ extension Array {
   }
 }
 
-class GameScene: SKScene {
+class ScreensaverScene: SKScene {
   
   
   var didSetup = false
@@ -61,7 +61,7 @@ class GameScene: SKScene {
   }
 }
 
-extension GameScene: SKPhysicsContactDelegate {
+extension ScreensaverScene: SKPhysicsContactDelegate {
   func didBeginContact(contact: SKPhysicsContact) {
     logoNode.updateColor()
   }

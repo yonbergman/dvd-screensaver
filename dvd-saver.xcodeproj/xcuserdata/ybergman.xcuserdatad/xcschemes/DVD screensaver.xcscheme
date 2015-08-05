@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B0497F041B6FE3710078C6A2"
-               BuildableName = "DVD screensaver.app"
-               BlueprintName = "DVD screensaver"
-               ReferencedContainer = "container:DVD screensaver.xcodeproj">
+               BuildableName = "dvd-saver.app"
+               BlueprintName = "dvd-saver"
+               ReferencedContainer = "container:dvd-saver.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B0497F1D1B6FE3710078C6A2"
-               BuildableName = "DVD screensaverTests.xctest"
-               BlueprintName = "DVD screensaverTests"
-               ReferencedContainer = "container:DVD screensaver.xcodeproj">
+               BuildableName = "dvd-saverTests.xctest"
+               BlueprintName = "dvd-saverTests"
+               ReferencedContainer = "container:dvd-saver.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B0497F1D1B6FE3710078C6A2"
-               BuildableName = "DVD screensaverTests.xctest"
-               BlueprintName = "DVD screensaverTests"
-               ReferencedContainer = "container:DVD screensaver.xcodeproj">
+               BuildableName = "dvd-saverTests.xctest"
+               BlueprintName = "dvd-saverTests"
+               ReferencedContainer = "container:dvd-saver.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0497F041B6FE3710078C6A2"
-            BuildableName = "DVD screensaver.app"
-            BlueprintName = "DVD screensaver"
-            ReferencedContainer = "container:DVD screensaver.xcodeproj">
+            BuildableName = "dvd-saver.app"
+            BlueprintName = "dvd-saver"
+            ReferencedContainer = "container:dvd-saver.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0497F041B6FE3710078C6A2"
-            BuildableName = "DVD screensaver.app"
-            BlueprintName = "DVD screensaver"
-            ReferencedContainer = "container:DVD screensaver.xcodeproj">
+            BuildableName = "dvd-saver.app"
+            BlueprintName = "dvd-saver"
+            ReferencedContainer = "container:dvd-saver.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B0497F041B6FE3710078C6A2"
-            BuildableName = "DVD screensaver.app"
-            BlueprintName = "DVD screensaver"
-            ReferencedContainer = "container:DVD screensaver.xcodeproj">
+            BuildableName = "dvd-saver.app"
+            BlueprintName = "dvd-saver"
+            ReferencedContainer = "container:dvd-saver.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
