@@ -12,64 +12,75 @@ import SpriteKit
 enum LogoType {
   static let imgName = "logo"
   
-  case Square, Logo, Oval
+  static let brightColors = [
+    SKColor.whiteColor(),
+    SKColor.lightGrayColor(),
+    SKColor.cyanColor(),
+
+  ]
+  static let darkColors = [
+    SKColor.greenColor(),
+    SKColor.redColor(),
+    SKColor.yellowColor(),
+    SKColor.orangeColor(),
+    SKColor.purpleColor(),
+    SKColor.magentaColor(),
+    SKColor.blueColor(),
+  ]
+  static let allColors = LogoType.brightColors + LogoType.darkColors
+  
+  case Logo, Oval, Rect
   
   static func random() -> LogoType {
-    return [LogoType.Square, LogoType.Logo].sample()
+    return [.Logo, .Oval, .Rect].sample()
   }
   
   var imageNamed: String { return LogoType.imgName }
   
-  func randomColor() -> SKColor {
-    return [
-      SKColor.greenColor(),
-      SKColor.redColor(),
-      SKColor.yellowColor(),
-      SKColor.orangeColor()
-      ].sample()
+  func randomColor(includingBright: Bool = true) -> SKColor {
+    return includingBright ? LogoType.allColors.sample() : LogoType.darkColors.sample()
   }
   
   func backgroundColor() -> SKColor {
     switch self {
-      case .Oval, .Square: return randomColor()
-      default: return SKColor.clearColor()
+      case .Logo: return SKColor.clearColor()
+      default: return randomColor(includingBright: false)
     }
   }
   
   func logoColor() -> SKColor {
     switch self {
-      case .Oval, .Square: return SKColor.whiteColor()
-      default: return randomColor()
+      case .Logo: return randomColor()
+      default: return SKColor.whiteColor()
     }
   }
   
   func next() -> LogoType {
     switch self {
-    case .Square: return .Logo
     case .Logo: return .Oval
-    case .Oval: return .Square
+    case .Oval: return .Rect
+    case .Rect: return .Logo
     }
   }
   
   var scale: CGFloat {
     switch self {
-    case .Square: return 0.8
     case .Logo: return 1
     case .Oval: return 0.7
+    case .Rect: return 0.8
     }
   }
   
   var colorBlendFactor: CGFloat {
     switch self {
-    case .Square, .Oval: return 0
-    case .Logo: return 1
+      case .Logo: return 1
+      default: return 0
     }
   }
   
   func pathForFrame(frame: CGRect) -> CGPath {
     switch self {
       case .Oval: return UIBezierPath(ovalInRect: frame).CGPath
-      case .Square: return UIBezierPath(rect: frame).CGPath
       default: return UIBezierPath(rect: frame).CGPath
     }
   }
@@ -91,6 +102,7 @@ class LogoNode: SKNode {
   let containerNode: SKShapeNode
 
   let logoWidth: CGFloat = 100
+  
   
   override init() {
 
