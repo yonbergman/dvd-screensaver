@@ -27,6 +27,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="circle" destination="k5D-eq-hQs" id="FF9-x3-29B"/>
                         <outlet property="line" destination="bHQ-LL-dDW" id="zTi-Id-2Ep"/>
