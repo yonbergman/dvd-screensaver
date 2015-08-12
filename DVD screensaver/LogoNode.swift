@@ -102,7 +102,6 @@ class LogoNode: SKNode {
 
   let logoWidth: CGFloat = 100
   
-  
   override init() {
 
     imgNode = SKSpriteNode(imageNamed: type.imageNamed)
@@ -110,9 +109,6 @@ class LogoNode: SKNode {
     let imgRatio = imgNode.size.height / imgNode.size.width
     let logoHeight = imgRatio * logoWidth
     imgNode.size = CGSize(width: logoWidth, height: logoHeight)
-    
-    
-    
     
     containerNode = SKShapeNode(rect: CGRect(x: -logoWidth/2, y: -logoHeight/2,
                                              width: logoWidth, height: logoHeight))

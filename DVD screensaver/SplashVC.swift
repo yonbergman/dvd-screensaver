@@ -12,10 +12,7 @@ class SplashViewController: UIViewController {
   
   @IBOutlet weak var line: UIView!
   @IBOutlet weak var circle: Circle!
-  
-  override func viewDidLoad() {
-//    circle.layer.mask = UILay
-  }
+
   override func viewDidAppear(animated: Bool) {
     let view = self.view
     self.line.frame = CGRect(x: 0, y: view.bounds.midY, width: 0, height: 0)
